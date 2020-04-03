@@ -1,0 +1,19 @@
+{
+  "name": "serverless-dynamodb-seed",
+  "version": "0.1",
+  "description": "Serverless Plugin for performing seeds on dynamodb",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arielschvartz/serverless-dynamodb-seed.git"
+  },
+  "author": "Ariel Schvartz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arielschvartz/serverless-dynamodb-seed/issues"
+  },
+  "homepage": "https://github.com/arielschvartz/serverless-dynamodb-seed#readme",
+  "dependencies": {
+    "bluebird": "^3.7.2"
+  }
+}
