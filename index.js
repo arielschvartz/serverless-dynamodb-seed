@@ -81,7 +81,7 @@ class ServerlessPlugin {
       let records = [];
       if (!this.seedName || this.seedName === seedName) {
         for (const seedFile of sources) {
-          const filePath = path.resolve(__dirname, `../${seedFile}`)
+          const filePath = path.join(this.serverless.config.servicePath, `${seedFile}`)
           records = records.concat(JSON.parse(fs.readFileSync(filePath, 'utf8')))
         }
       }
