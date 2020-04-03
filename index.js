@@ -1,5 +1,9 @@
 'use strict';
 
+const BbPromise = require('bluebird');
+const fs = require('fs');
+const path = require('path');
+
 class ServerlessPlugin {
   constructor(serverless, options) {
     this.serverless = serverless;
