@@ -1,6 +1,6 @@
 {
   "name": "serverless-dynamodb-seed",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Serverless Plugin for performing seeds on dynamodb",
   "main": "index.js",
   "repository": {

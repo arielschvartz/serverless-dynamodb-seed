@@ -17,16 +17,17 @@ plugins:
 
 ## Configure
 
-The configuration of the plugin is done by defining a `custom: webpack` object in your `serverless.yml` with your specific configuration. You must set at least one seed for this plugin to work correctly.
+The configuration of the plugin is done by defining a `custom: seed` object in your `serverless.yml` with your specific configuration. You must set at least one seed for this plugin to work correctly.
 
 You can set multiple named seed for running just one if needed.
 
 ```yaml
 custom:
-  mySeedName:
-    table: myDynamodbTable # Name of the DynamoDB Table - In this version, Cloudformation references are not accepted.
-    sources:
-      - path/to/my/seed.json
+  seed:
+    mySeedName:
+      table: myDynamodbTable # Name of the DynamoDB Table - In this version, Cloudformation references are not accepted.
+      sources:
+        - path/to/my/seed.json
 ```
 
 Each named seed can have only one table, but may have multiple source files. This plugin will read all the files, concat them and save them do AWS.
@@ -73,6 +74,12 @@ If you want to run just one seed:
 ```bash
 $ sls dynamodb:seed --seed otherSeed
 ```
+
+## Stages
+
+Since this is a serverless plugin, if you run with the correct profile and/or stage, it will just use your configured database. So, you can run like:
+
+sls dynamodb:seed --stage dev --profile my-aws-profile
 
 ## Warning
 
