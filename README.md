@@ -53,14 +53,15 @@ If you have multiple named seeds:
 
 ```yaml
 custom:
-  seedExample:
-    table: myDynamodbTable
-    sources:
-      - path/to/my/seed.json
-  otherSeed:
-    table: myOtherDynamodbTable
-    sources:
-      - path/to/my/otherSeed.json
+  seed:
+    seedExample:
+      table: myDynamodbTable
+      sources:
+        - path/to/my/seed.json
+    otherSeed:
+      table: myOtherDynamodbTable
+      sources:
+        - path/to/my/otherSeed.json
 ```
 
 This command will run all the available seeds.
