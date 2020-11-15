@@ -80,7 +80,9 @@ $ sls dynamodb:seed --seed otherSeed
 
 Since this is a serverless plugin, if you run with the correct profile and/or stage, it will just use your configured database. So, you can run like:
 
+```bash
 sls dynamodb:seed --stage dev --profile my-aws-profile
+```
 
 ## Warning
 
