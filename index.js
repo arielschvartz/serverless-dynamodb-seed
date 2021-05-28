@@ -21,6 +21,7 @@ class ServerlessPlugin {
           seed: {
             required: false,
             usage: 'The name of the seed to be used',
+            type: 'string',
           },
         }
       },
